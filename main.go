@@ -23,7 +23,7 @@ func main() {
 
 	go func() {
 		<-c
-		log.Info().Msg("exit signal recieved")
+		log.Info().Msg("exit signal received")
 		cancel()
 	}()
 

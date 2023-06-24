@@ -15,7 +15,7 @@ func Start(ctx context.Context, port int) {
 
 	go func() {
 		<-ctx.Done()
-		log.Info().Msg("cancel signal recieved in rest")
+		log.Info().Msg("cancel signal received in rest")
 		if err := app.Shutdown(); err != nil {
 			log.Err(err).Caller().Send()
 		}
